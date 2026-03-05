@@ -1,0 +1,30 @@
+<div class="tool-header">
+    <div class="tool-title">🛠️ JSON 转 JS 对象 (清空 Value)</div>
+    <div class="tool-actions">
+        <label style="font-size:0.9rem; margin-right: 5px;">默认值设为:</label>
+        <select id="j2js-default-val" class="textarea-input"
+            style="width: auto; padding: 4px 10px; min-height: unset; border-radius: 6px;">
+            <option value="null">null</option>
+            <option value="empty">"" (空字符串)</option>
+        </select>
+        <button id="j2js-convert-btn" class="primary-btn">一键转换</button>
+        <button id="j2js-copy-btn" class="icon-btn tooltip" data-tooltip="复制 JS 对象"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg></button>
+    </div>
+</div>
+
+<div class="split-pane">
+    <div class="pane-left">
+        <label>JSON 源数据：</label>
+        <textarea id="j2js-input" class="textarea-input"
+            placeholder='{"id": 123, "name": "foo", "nested": {"key": "value"}}'></textarea>
+    </div>
+    <div class="pane-right">
+        <label>JS 对象结果：(键无双引号)</label>
+        <textarea id="j2js-output" class="textarea-input" readonly placeholder="转化后的 JS 对象将在这里显示..."></textarea>
+    </div>
+</div>

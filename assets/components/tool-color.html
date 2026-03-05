@@ -1,0 +1,34 @@
+<div class="tool-header">
+    <div class="tool-title">🎨 颜色值转换</div>
+</div>
+
+<div class="tool-content vertical-layout" style="max-width: 600px; margin: 0 auto; margin-top: 2rem;">
+    <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <input type="color" id="color-picker" value="#3498db"
+                style="width: 80px; height: 80px; padding: 0; border: none; border-radius: 12px; cursor: pointer;">
+            <div id="color-preview"
+                style="flex: 1; height: 80px; border-radius: 12px; background: #3498db; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            </div>
+        </div>
+
+        <div>
+            <label style="font-size: 0.9rem;">HEX 网页端原生：</label>
+            <input type="text" id="color-hex" class="textarea-input" value="#3498db"
+                style="min-height: unset; font-family: monospace; font-size: 1.2rem; margin-top: 5px;">
+        </div>
+
+        <div>
+            <label style="font-size: 0.9rem;">RGB 格式：</label>
+            <input type="text" id="color-rgb" class="textarea-input" value="rgb(52, 152, 219)"
+                style="min-height: unset; font-family: monospace; font-size: 1.2rem; margin-top: 5px;">
+        </div>
+
+        <div>
+            <label style="font-size: 0.9rem;">HSL 格式：</label>
+            <input type="text" id="color-hsl" class="textarea-input" value="hsl(204, 70%, 53%)"
+                style="min-height: unset; font-family: monospace; font-size: 1.2rem; margin-top: 5px;">
+        </div>
+    </div>
+</div>

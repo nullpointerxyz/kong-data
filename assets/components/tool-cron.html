@@ -1,0 +1,62 @@
+<div class="tool-header">
+    <div class="tool-title">⏱️ Cron 表达式解析与生成</div>
+    <div class="tool-actions">
+        <button id="cron-clear-btn" class="icon-btn tooltip" data-tooltip="清空"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <line x1="10" y1="11" x2="10" y2="17"></line>
+                <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg></button>
+    </div>
+</div>
+
+<div class="tool-content vertical-layout">
+    <div class="input-group">
+        <label>输入 Cron 表达式：默认格式 <span style="color:var(--primary-color);">* * * * *</span></label>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="cron-input" class="textarea-input" placeholder="例如: 0 0/5 * * * ?"
+                value="* * * * * *" style="font-family: monospace; font-size: 1.2rem; margin-bottom: 0;">
+            <button id="cron-parse-btn" class="primary-btn">解析</button>
+        </div>
+        <div class="cron-examples" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="tag" data-cron="0 * * * * *">每分钟</span>
+            <span class="tag" data-cron="0 0 * * * *">每小时</span>
+            <span class="tag" data-cron="0 0 0 * * *">每天零点</span>
+            <span class="tag" data-cron="0 0 12 * * ?">每天中午12点</span>
+            <span class="tag" data-cron="0 15 10 ? * 6L">每月最后一个星期五上午10:15</span>
+        </div>
+    </div>
+
+    <div class="output-group">
+        <label>表达式含义：</label>
+        <div id="cron-meaning" class="glass-panel"
+            style="font-size: 1.5rem; font-weight: 500; color: var(--primary-color); padding: 1.5rem; text-align: center; margin-bottom: 1rem;">
+            请点击解析或输入表达式
+        </div>
+
+        <label>最近 5 次执行时间：</label>
+        <ul id="cron-next-list" class="glass-panel"
+            style="list-style: none; padding: 1rem; margin: 0; line-height: 1.8; font-family: monospace;">
+            <!-- 最近5次时间插入这里 -->
+        </ul>
+    </div>
+</div>
+
+<style>
+    .tag {
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .tag:hover {
+        background: rgba(var(--primary-color-rgb), 0.2);
+        border-color: var(--primary-color);
+    }
+</style>

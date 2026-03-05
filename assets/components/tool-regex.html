@@ -1,0 +1,40 @@
+<div class="tool-header">
+    <div class="tool-title">🎯 正则测试机 (Regex Tester)</div>
+</div>
+
+<div class="tool-content vertical-layout">
+    <div class="input-group">
+        <label>正则表达式：</label>
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <span style="font-size: 1.5rem; color: var(--primary-color);">/</span>
+            <input type="text" id="regex-pattern" class="textarea-input" placeholder="输入正则，例如: ^[a-z]+$"
+                style="min-height: unset; font-family: monospace;">
+            <span style="font-size: 1.5rem; color: var(--primary-color);">/</span>
+            <input type="text" id="regex-flags" class="textarea-input" placeholder="标志: g, i, m" value="g"
+                style="min-height: unset; width: 100px; font-family: monospace;">
+        </div>
+
+        <label>测试文本：</label>
+        <textarea id="regex-text" class="textarea-input" placeholder="输入需要被测试的文本..."></textarea>
+    </div>
+
+    <div class="output-group">
+        <label>匹配结果：</label>
+        <div id="regex-result-display" class="glass-panel"
+            style="padding: 1rem; min-height: 100px; line-height: 1.8; white-space: pre-wrap; font-family: monospace;">
+        </div>
+
+        <label style="margin-top: 15px;">匹配详情列表：</label>
+        <ul id="regex-match-list" class="glass-panel"
+            style="list-style: none; padding: 1rem; margin: 0; max-height: 200px; overflow-y: auto; font-family: monospace;">
+        </ul>
+    </div>
+</div>
+
+<style>
+    .regex-highlight {
+        background: rgba(var(--primary-color-rgb), 0.4);
+        border-radius: 4px;
+        padding: 0 2px;
+    }
+</style>

@@ -1,0 +1,34 @@
+<div class="tool-header">
+    <div class="tool-title">🔄 JSON / YAML / XML 格式互转</div>
+    <div class="tool-actions">
+        <select id="format-source-type" class="textarea-input"
+            style="width: auto; padding: 4px 10px; min-height: unset; border-radius: 6px;">
+            <option value="json">JSON</option>
+            <option value="yaml">YAML</option>
+        </select>
+        <span style="color: var(--text-color);">➔</span>
+        <select id="format-target-type" class="textarea-input"
+            style="width: auto; padding: 4px 10px; min-height: unset; border-radius: 6px;">
+            <option value="yaml">YAML</option>
+            <option value="json">JSON</option>
+        </select>
+        <button id="format-convert-btn" class="primary-btn">转换</button>
+        <button id="format-copy-btn" class="icon-btn tooltip" data-tooltip="复制结果"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg></button>
+    </div>
+</div>
+
+<div class="split-pane">
+    <div class="pane-left">
+        <label>源数据：</label>
+        <textarea id="format-input" class="textarea-input" placeholder="请输入我们要转换的 JSON 或 YAML..."></textarea>
+    </div>
+    <div class="pane-right">
+        <label>转换结果：</label>
+        <textarea id="format-output" class="textarea-input" readonly placeholder="结果展示..."></textarea>
+    </div>
+</div>

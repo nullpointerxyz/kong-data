@@ -53,6 +53,13 @@
             <button class="tab-btn" data-tool="jwt">🔐 JWT 解析</button>
             <button class="tab-btn" data-tool="url">🔗 URL 解析</button>
             <button class="tab-btn" data-tool="uuid">🤖 UUID 生成</button>
+            <button class="tab-btn" data-tool="cron">⏱️ Cron 解析</button>
+            <button class="tab-btn" data-tool="format-converter">🔄 格式互转</button>
+            <button class="tab-btn" data-tool="json-to-struct">🧩 JSON 转实体类</button>
+            <button class="tab-btn" data-tool="hash">🧮 Hash 计算</button>
+            <button class="tab-btn" data-tool="regex">🎯 正则测试</button>
+            <button class="tab-btn" data-tool="color">🎨 颜色转换</button>
+            <button class="tab-btn" data-tool="json-to-js">🛠️ JSON 转 JS</button>
         </nav>
 
         <!-- 工具1：文本清洗 -->
@@ -110,6 +117,29 @@
 
         <!-- 工具19：UUID 生成 -->
         <div class="tool-panel" id="tool-uuid" data-include="assets/components/tool-uuid.html"></div>
+
+        <!-- 工具20：Cron 解析 -->
+        <div class="tool-panel" id="tool-cron" data-include="assets/components/tool-cron.html"></div>
+
+        <!-- 工具21：格式互转 -->
+        <div class="tool-panel" id="tool-format-converter" data-include="assets/components/tool-format-converter.html">
+        </div>
+
+        <!-- 工具22：JSON 转实体类 -->
+        <div class="tool-panel" id="tool-json-to-struct" data-include="assets/components/tool-json-to-struct.html">
+        </div>
+
+        <!-- 工具23：Hash 计算 -->
+        <div class="tool-panel" id="tool-hash" data-include="assets/components/tool-hash.html"></div>
+
+        <!-- 工具24：正则测试 -->
+        <div class="tool-panel" id="tool-regex" data-include="assets/components/tool-regex.html"></div>
+
+        <!-- 工具25：颜色转换 -->
+        <div class="tool-panel" id="tool-color" data-include="assets/components/tool-color.html"></div>
+
+        <!-- 工具26：JSON 转 JS 对象 -->
+        <div class="tool-panel" id="tool-json-to-js" data-include="assets/components/tool-json-to-js.html"></div>
     </main>
 
     <!-- 设置弹窗 -->
@@ -148,6 +178,18 @@
     <script src="assets/js/jwt.js"></script>
     <script src="assets/js/url.js"></script>
     <script src="assets/js/uuid.js"></script>
+    <script src="assets/js/cron.js"></script>
+    <script src="assets/js/format-converter.js"></script>
+    <script src="assets/js/json-to-struct.js"></script>
+    <script src="assets/js/hash.js"></script>
+    <script src="assets/js/regex.js"></script>
+    <script src="assets/js/color.js"></script>
+    <script src="assets/js/json-to-js.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cronstrue@2.41.0/dist/cronstrue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cronstrue@2.41.0/locales/zh_CN.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

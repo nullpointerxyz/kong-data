@@ -1,0 +1,28 @@
+<div class="tool-header">
+    <div class="tool-title">🧩 JSON 转实体类 (Java)</div>
+    <div class="tool-actions">
+        <select id="jts-language" class="textarea-input"
+            style="width: auto; padding: 4px 10px; min-height: unset; border-radius: 6px;">
+            <option value="java">Java (Lombok)</option>
+        </select>
+        <button id="jts-convert-btn" class="primary-btn">一键生成</button>
+        <button id="jts-copy-btn" class="icon-btn tooltip" data-tooltip="复制实体类"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg></button>
+    </div>
+</div>
+
+<div class="split-pane">
+    <div class="pane-left">
+        <label>JSON 报文：</label>
+        <textarea id="jts-input" class="textarea-input"
+            placeholder='{"userId": 1, "userName": "Tom", "tags": ["admin", "dev"]}'></textarea>
+    </div>
+    <div class="pane-right">
+        <label>生成结果：</label>
+        <textarea id="jts-output" class="textarea-input" readonly placeholder="Java 代码将在此展示..."></textarea>
+    </div>
+</div>

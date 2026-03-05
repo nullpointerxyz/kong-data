@@ -1,0 +1,27 @@
+<div class="tool-header">
+    <div class="tool-title">🧮 Hash / Crypto 计算器</div>
+    <div class="tool-actions">
+        <select id="hash-algo" class="textarea-input"
+            style="width: auto; padding: 4px 10px; min-height: unset; border-radius: 6px;">
+            <option value="md5">MD5</option>
+            <option value="sha1">SHA-1</option>
+            <option value="sha256">SHA-256</option>
+            <option value="sha512">SHA-512</option>
+            <option value="base64-encode">Base64 Encode</option>
+            <option value="base64-decode">Base64 Decode</option>
+        </select>
+        <button id="hash-calculate-btn" class="primary-btn">计算</button>
+    </div>
+</div>
+
+<div class="split-pane">
+    <div class="pane-left">
+        <label>输入文本：</label>
+        <textarea id="hash-input" class="textarea-input" placeholder="输入你想计算 Hash 或加密的字符串..."></textarea>
+    </div>
+    <div class="pane-right">
+        <label>计算结果：</label>
+        <textarea id="hash-output" class="textarea-input" readonly placeholder="结果会在这里出现..."
+            style="font-family: monospace; font-size: 1.1rem;"></textarea>
+    </div>
+</div>
