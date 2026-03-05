@@ -45,6 +45,7 @@
             <button class="tab-btn" data-tool="id-validator">🔢 ID 数据校验</button>
             <button class="tab-btn" data-tool="sql-format">🗃️ SQL 格式化</button>
             <button class="tab-btn" data-tool="form-json">🔄 表单 / JSON</button>
+            <button class="tab-btn" data-tool="data-gen">📊 批量造数</button>
         </nav>
 
         <!-- 工具1：文本清洗 -->
@@ -90,6 +91,9 @@
 
         <!-- 工具15：表单 / JSON -->
         <div class="tool-panel" id="tool-form-json" data-include="assets/components/tool-form-json.html"></div>
+
+        <!-- 工具16：批量造数 -->
+        <div class="tool-panel" id="tool-data-gen" data-include="assets/components/tool-data-gen.html"></div>
     </main>
 
     <!-- 设置弹窗 -->
@@ -124,6 +128,7 @@
     <script src="assets/js/id-validator.js"></script>
     <script src="assets/js/sql-format.js"></script>
     <script src="assets/js/form-json.js"></script>
+    <script src="assets/js/data-gen.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
