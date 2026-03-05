@@ -1,0 +1,55 @@
+<simulated-window>
+    <div class="controls-section">
+        <div class="control-group">
+            <h3>选项设置</h3>
+            <div class="checkbox-grid">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="uuid-hyphen" checked>
+                    <span class="checkmark"></span>
+                    <span>保留横线 (-)</span>
+                </label>
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="uuid-uppercase">
+                    <span class="checkmark"></span>
+                    <span>大写输出 (UPPERCASE)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <h3>参数控制</h3>
+            <div class="slider-row"
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <label style="margin-bottom: 0;">生成数量:</label>
+                <input type="number" id="uuid-count" min="1" max="10000" value="5" class="inline-input"
+                    style="width: 80px;">
+            </div>
+            <div class="slider-row" style="display: flex; align-items: center; justify-content: space-between;">
+                <label style="margin-bottom: 0;">版本:</label>
+                <select id="uuid-version" class="select-input" style="width: 140px;">
+                    <option value="v4">UUID v4 (随机)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-section">
+        <button id="uuid-generate-btn" class="primary-btn">
+            <span class="icon">✨</span> 生成 UUID
+        </button>
+    </div>
+
+    <div class="output-section">
+        <div class="output-header">
+            <label for="uuid-output">生成结果 <span class="badge success" id="uuid-result-info">Ready</span></label>
+            <button class="icon-btn tooltip copy-btn" data-target="uuid-output" data-tooltip="复制内容">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </div>
+        <textarea id="uuid-output" readonly placeholder="生成的 UUID 将显示在这里..." style="height: 300px;"></textarea>
+    </div>
+</simulated-window>

@@ -1,0 +1,46 @@
+<simulated-window>
+    <div class="input-section">
+        <label for="url-input">输入含有参数的 URL 链接</label>
+        <textarea id="url-input" placeholder="https://example.com/path?param1=value1&param2=value2..."
+            style="height: 100px; word-break: break-all;"></textarea>
+    </div>
+
+    <div class="action-section">
+        <button id="url-parse-btn" class="primary-btn">
+            <span class="icon">🔗</span> 深度解析
+        </button>
+    </div>
+
+    <div class="output-section">
+        <div class="output-header">
+            <label>解析结果 <span class="badge success">Parsed</span></label>
+        </div>
+
+        <div
+            style="background: rgba(0,0,0,0.2); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+            <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; margin-bottom: 5px;">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">基础地址:</span>
+                <span id="url-base-out"
+                    style="word-break: break-all; font-family: 'JetBrains Mono', monospace; color: var(--accent-color);">-</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px;">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Hash路径:</span>
+                <span id="url-hash-out"
+                    style="word-break: break-all; font-family: 'JetBrains Mono', monospace; color: var(--secondary-color);">-</span>
+            </div>
+        </div>
+
+        <label style="margin-top: 1rem; margin-bottom: 8px;">Query 参数列表 (支持直接修改并重新拼接)</label>
+        <div id="url-params-container"
+            style="background: rgba(0,0,0,0.2); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1rem; min-height: 100px;">
+            <div style="text-align: center; color: var(--text-muted); padding: 2rem;">暂无参数解析</div>
+        </div>
+
+        <div style="margin-top: 1rem; text-align: right;">
+            <button id="url-rebuild-btn" class="primary-btn secondary"
+                style="display: inline-flex; padding: 0.5rem 1rem; font-size: 0.85rem;">
+                <span class="icon">🔄</span> 更新 URL 修改
+            </button>
+        </div>
+    </div>
+</simulated-window>

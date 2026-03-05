@@ -46,6 +46,9 @@
             <button class="tab-btn" data-tool="sql-format">🗃️ SQL 格式化</button>
             <button class="tab-btn" data-tool="form-json">🔄 表单 / JSON</button>
             <button class="tab-btn" data-tool="data-gen">📊 批量造数</button>
+            <button class="tab-btn" data-tool="jwt">🔐 JWT 解析</button>
+            <button class="tab-btn" data-tool="url">🔗 URL 解析</button>
+            <button class="tab-btn" data-tool="uuid">🤖 UUID 生成</button>
         </nav>
 
         <!-- 工具1：文本清洗 -->
@@ -94,6 +97,15 @@
 
         <!-- 工具16：批量造数 -->
         <div class="tool-panel" id="tool-data-gen" data-include="assets/components/tool-data-gen.html"></div>
+
+        <!-- 工具17：JWT 解析 -->
+        <div class="tool-panel" id="tool-jwt" data-include="assets/components/tool-jwt.html"></div>
+
+        <!-- 工具18：URL 解析 -->
+        <div class="tool-panel" id="tool-url" data-include="assets/components/tool-url.html"></div>
+
+        <!-- 工具19：UUID 生成 -->
+        <div class="tool-panel" id="tool-uuid" data-include="assets/components/tool-uuid.html"></div>
     </main>
 
     <!-- 设置弹窗 -->
@@ -129,6 +141,9 @@
     <script src="assets/js/sql-format.js"></script>
     <script src="assets/js/form-json.js"></script>
     <script src="assets/js/data-gen.js"></script>
+    <script src="assets/js/jwt.js"></script>
+    <script src="assets/js/url.js"></script>
+    <script src="assets/js/uuid.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,50 @@
+<simulated-window>
+    <div class="input-section">
+        <label for="jwt-input">输入 JWT 字符串</label>
+        <textarea id="jwt-input" placeholder="eyJhbG..."
+            style="height: 120px; word-break: break-all; font-family: 'JetBrains Mono', monospace;"></textarea>
+        <div class="stats" id="jwt-status">等待解析...</div>
+    </div>
+
+    <div class="action-section">
+        <button id="jwt-decode-btn" class="primary-btn">
+            <span class="icon">🔓</span> 解析 Token
+        </button>
+    </div>
+
+    <div class="output-section">
+        <div class="diff-inputs" style="grid-template-columns: 1fr 2fr;">
+            <div>
+                <div class="output-header">
+                    <label>Header <span class="badge"
+                            style="color:#e84393;border-color:rgba(232,67,147,0.3);background:rgba(232,67,147,0.1)">ALGORITHM
+                            & TOKEN TYPE</span></label>
+                    <button class="icon-btn tooltip copy-btn" data-target="jwt-header-output" data-tooltip="复制 Header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <textarea id="jwt-header-output" readonly placeholder="Header JSON" style="color: #e84393;"></textarea>
+            </div>
+            <div>
+                <div class="output-header">
+                    <label>Payload <span class="badge"
+                            style="color:#0984e3;border-color:rgba(9,132,227,0.3);background:rgba(9,132,227,0.1)">DATA</span></label>
+                    <button class="icon-btn tooltip copy-btn" data-target="jwt-payload-output"
+                        data-tooltip="复制 Payload">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <textarea id="jwt-payload-output" readonly placeholder="Payload JSON"
+                    style="color: #0984e3; height: 300px;"></textarea>
+            </div>
+        </div>
+    </div>
+</simulated-window>
