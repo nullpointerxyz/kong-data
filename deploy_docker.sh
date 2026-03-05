@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # 定义变量
-IMAGE_NAME="fix-data"
-CONTAINER_NAME="my-fix-data"
+IMAGE_NAME="kong-data"
+CONTAINER_NAME="my-kong-data"
 PORT=12555
 
 echo "开始构建镜像: ${IMAGE_NAME} ..."
