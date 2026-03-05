@@ -1,4 +1,4 @@
-# KongData (地表最强数据处理工具)
+# 🦍 KongData (地表最强数据处理工具)
 
 [![GitHub Pages](https://img.shields.io/badge/website-online-brightgreen.svg)](https://nullpointerxyz.github.io/fix-data/)
 
